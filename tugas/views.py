@@ -48,4 +48,8 @@ def delete(request, pk):
         'item' : item,
     }
 
-    return render(request, "tugas/delete.html", context)
+    return (request, "tugas/delete.html", context)
+
+def csrf_failure(request, reason=""):
+    ctx = {'message': 'some custom messages'}
+    return render(request, "tugas/csrf.html",ctx)

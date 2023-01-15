@@ -123,4 +123,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGIN = ['https://hammamtodoapp-production.up.railway.app/',"http://localhost:3000", "http://127.0.0.1:3000"]
+CSRF_FAILURE_VIEW = 'tugas.views.csrf_failure'
